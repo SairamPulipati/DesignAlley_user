@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home2"
+    style="@style/Theme.AppCompat.DayNight.NoActionBar">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/home2_input_search"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autoSizeMinTextSize="25sp"
+        android:background="@drawable/input_gray_roundcorners"
+        android:hint="Search"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home2_rv_recycler2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home2_input_search"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home2_bnav_bottom"
+        android:layout_alignParentBottom="true"
+        app:itemRippleColor="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        android:elevation="2dp"
+        app:menu="@menu/menu_bottom_navigation"/>
+
+</RelativeLayout>

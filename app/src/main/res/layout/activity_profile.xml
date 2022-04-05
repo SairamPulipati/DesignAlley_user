@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    style="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_user"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_above="@+id/profile_tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/testimonioals" />
+
+    <TextView
+        android:id="@+id/profile_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profile_tv_subtitle"
+        android:layout_centerHorizontal="true"
+        android:text="Edit Profile" />
+
+    <TextView
+        android:id="@+id/profile_tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profile_tv_Signout"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:text="Hi Nikhil!"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/profile_tv_Signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profile_input_name"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Sign out"
+        android:textColor="@color/gray"
+        android:textSize="18sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/profile_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/profile_input_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:autoSizeMinTextSize="25sp"
+        android:background="@drawable/input_gray_roundcorners"
+        android:hint="Name"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/profile_input_email"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/profile_input_mobile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:autoSizeMinTextSize="25sp"
+        android:background="@drawable/input_gray_roundcorners"
+        android:hint="Email"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/profile_input_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/profile_input_address"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:autoSizeMinTextSize="25sp"
+        android:background="@drawable/input_gray_roundcorners"
+        android:hint="Mobile Number"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/profile_input_address"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/profile_input_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:autoSizeMinTextSize="25sp"
+        android:background="@drawable/input_gray_roundcorners"
+        android:hint="Address"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/profile_input_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/profile_input_confirmpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:autoSizeMinTextSize="25sp"
+        android:background="@drawable/input_gray_roundcorners"
+        android:hint="Password"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/profile_input_confirmpassword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/profile_button_save"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:autoSizeMinTextSize="25sp"
+        android:background="@drawable/input_gray_roundcorners"
+        android:hint="Confirm Password"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/profile_button_save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:autoSizeMinTextSize="18sp"
+        android:backgroundTint="@color/black"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="30dp" />
+
+</RelativeLayout>
