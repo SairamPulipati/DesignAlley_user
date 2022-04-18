@@ -38,13 +38,6 @@ public class More extends AppCompatActivity {
         recyclerViewmore.setLayoutManager(layoutManagerm);
         recyclerViewmore.setItemAnimator(new DefaultItemAnimator());
         recyclerViewmore.setAdapter(moreadapter);
-        mSignout = findViewById(R.id.more_btn_signout);
-        mSignout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-           More_SignoutActivity();
-            }
-        });
         BottomNavigationView bottomNavigationView3 =findViewById(R.id.more_bnav_bottom);
         bottomNavigationView3.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -56,6 +49,10 @@ public class More extends AppCompatActivity {
                         return true;
                     case R.id.dashboard:
                         startActivity(new Intent(getApplicationContext(),Home2.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.chat:
+                        startActivity(new Intent(getApplicationContext(),Chat.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.profile:

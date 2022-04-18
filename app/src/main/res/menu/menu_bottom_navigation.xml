@@ -5,7 +5,10 @@
      android:icon="@drawable/ic_baseline_dashboard"/>
     <item android:icon="@drawable/ic_baseline_home"
         android:id="@+id/dashboard"
-        android:title="Dashboard"/>
+        android:title="Menu"/>
+    <item android:id="@+id/chat"
+        android:title="chat"
+        android:icon="@drawable/ic_baseline_chat"/>
     <item android:title="Profile"
         android:id="@+id/profile"
         android:icon="@drawable/ic_baseline_person"/>

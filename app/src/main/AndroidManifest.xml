@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design_Alley">
         <activity
+            android:name=".Chat"
+            android:exported="false" />
+        <activity
             android:name=".Splash_Screen"
             android:exported="false" />
         <activity

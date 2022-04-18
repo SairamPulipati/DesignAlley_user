@@ -46,6 +46,10 @@ public class Home2 extends AppCompatActivity {
                         return true;
                     case R.id.dashboard:
                         return true;
+                    case R.id.chat:
+                        startActivity(new Intent(getApplicationContext(),Chat.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.profile:
                         startActivity(new Intent(getApplicationContext(),More.class));
                         overridePendingTransition(0,0);
