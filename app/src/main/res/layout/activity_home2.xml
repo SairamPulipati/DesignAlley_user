@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Home2"
     style="@style/Theme.AppCompat.DayNight.NoActionBar">
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/home2_input_search"
         android:layout_width="match_parent"

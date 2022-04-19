@@ -20,14 +20,29 @@ import java.util.ArrayList;
 public class More extends AppCompatActivity {
    private RecyclerView recyclerViewmore;
    private Button mSignout;
+   private Button mEdit;
    private ArrayList<moreModel> more;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more);
+        mSignout = findViewById(R.id.more_btn_signout);
+        mEdit = findViewById(R.id.more_btn_edit);
+        mSignout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                More_SignoutActivity();
+            }
+        });
+        mEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                More_EditActivity();
+            }
+        });
         recyclerViewmore = findViewById(R.id.more_rv_recycler);
         more = new ArrayList<>();
-        Integer[] icons = {R.drawable.hand,R.drawable.orders,R.drawable.notification,R.drawable.email,R.drawable.info};
+        Integer[] icons = {R.drawable.ic_baseline_monetization,R.drawable.ic_baseline_shopping_bag,R.drawable.ic_baseline_notifications,R.drawable.ic_baseline_chat,R.drawable.ic_baseline_info};
         String[] details = {"Payment Details","My Orders","Notifications","Chats","About Us"};
         for (int m=0;m<icons.length;m++){
             moreModel moreModel = new moreModel(icons[m],details[m]);
@@ -67,5 +82,9 @@ public class More extends AppCompatActivity {
     private void More_SignoutActivity() {
         Intent msignIntent = new Intent(this,login.class);
         startActivity(msignIntent);
+    }
+    private void More_EditActivity(){
+        Intent mEditIntent = new Intent(this,Profile.class);
+        startActivity(mEditIntent);
     }
 }
